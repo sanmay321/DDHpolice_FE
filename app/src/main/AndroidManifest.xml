@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
 
     <application
         android:allowBackup="true"
@@ -15,17 +16,17 @@
         android:theme="@style/Theme.DDHPolice"
         tools:targetApi="31">
         <activity
-            android:name=".profileView"
+            android:name="com.demoo.ddhpolice.profileView"
             android:exported="false" />
         <activity
             android:requestLegacyExternalStorage="true"
-            android:name=".showingData.dataShow"
+            android:name="com.demoo.ddhpolice.showingData.dataShow"
             android:exported="false" />
         <activity
-            android:name=".AddingNewPerson"
+            android:name="com.demoo.ddhpolice.AddingNewPerson"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name="com.demoo.ddhpolice.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

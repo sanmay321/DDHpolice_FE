@@ -1,10 +1,11 @@
-package com.example.ddhpolice
+package com.demoo.ddhpolice
 
 import android.app.Dialog
 import android.app.ProgressDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
+import com.example.ddhpolice.R
 import com.example.ddhpolice.databinding.ActivityAddingNewPersonBinding
 import com.google.firebase.database.*
 

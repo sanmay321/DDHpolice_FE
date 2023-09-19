@@ -1,4 +1,4 @@
-package com.example.ddhpolice.showingData
+package com.demoo.ddhpolice.showingData
 
 import android.content.pm.PackageManager
 import android.os.Build
@@ -12,7 +12,7 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.ddhpolice.databinding.ActivityDataShowBinding
-import com.example.ddhpolice.utlis.ut
+import com.demoo.ddhpolice.utlis.ut
 import com.google.firebase.database.*
 import com.opencsv.CSVWriter
 import java.io.File
@@ -52,14 +52,16 @@ class  dataShow : AppCompatActivity() {
                         val temp = temppp?.let { ds.child(it).value.toString() }
                         if( temp == tempp){
                             count++;
-                            data.add(personItem(
+                            data.add(
+                                personItem(
                                 ds.child("rank").value.toString(),
                                 ds.child("name").value.toString(),
                                 ds.child("unit").value.toString(),
                                 ds.child("position").value.toString(),
                                 ds.child("phone").value.toString(),
                                 ds.child("remarks").value.toString()
-                            ))
+                            )
+                            )
                         }
                     }
                     if(count==0){
@@ -71,7 +73,7 @@ class  dataShow : AppCompatActivity() {
                     // Setting the Adapter with the recyclerview
                     binding.recyleViewTrackrderList.adapter = adapter
 
-                    adapter.setOnclickListner(object : dataAdapter.OnItemClickListner{
+                    adapter.setOnclickListner(object : dataAdapter.OnItemClickListner {
                         override fun onclick(position: Int) {
                             Toast.makeText(this@dataShow, "you clicked on item no "+ data[position].id, Toast.LENGTH_SHORT).show()
                         }
@@ -93,13 +95,17 @@ class  dataShow : AppCompatActivity() {
 
     fun save(){
 
+        val permissonss = if (Build.VERSION.SDK_INT >= 33)arrayOf(android.Manifest.permission.READ_MEDIA_IMAGES);
+        else arrayOf(android.Manifest.permission.WRITE_EXTERNAL_STORAGE);
+
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if (ContextCompat.checkSelfPermission(this,android.Manifest.permission.WRITE_EXTERNAL_STORAGE)
                 != PackageManager.PERMISSION_GRANTED
             ) {
                 ActivityCompat.requestPermissions(
                     this,
-                    arrayOf(android.Manifest.permission.WRITE_EXTERNAL_STORAGE),
+                    permissonss,
                     1
                 )
             } else {

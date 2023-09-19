@@ -1,4 +1,4 @@
-package com.example.ddhpolice.showingData
+package com.demoo.ddhpolice.showingData
 
 import android.view.LayoutInflater
 import android.view.View

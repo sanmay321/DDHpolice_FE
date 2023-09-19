@@ -1,4 +1,4 @@
-package com.example.ddhpolice
+package com.demoo.ddhpolice
 
 import android.content.Intent
 import android.content.pm.PackageManager
@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.example.ddhpolice.databinding.ActivityMainBinding
-import com.example.ddhpolice.showingData.dataShow
+import com.demoo.ddhpolice.showingData.dataShow
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import com.opencsv.CSVWriter
@@ -59,14 +59,14 @@ class MainActivity : AppCompatActivity() {
 
         binding.Unitsearch.setOnClickListener {
             val temp = binding.Unitspinner.getSelectedItem().toString()
-            val intent = Intent(this,dataShow::class.java)
+            val intent = Intent(this, dataShow::class.java)
             intent.putExtra("value",temp)
             intent.putExtra("type","unit")
             startActivity(intent)
         }
             binding.Positionsearch.setOnClickListener {
                 val temp = binding.PositionSpinner.getSelectedItem().toString()
-                val intent = Intent(this,dataShow::class.java)
+                val intent = Intent(this, dataShow::class.java)
                 intent.putExtra("value",temp)
                 intent.putExtra("type","position")
                 startActivity(intent)
@@ -75,7 +75,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.Ranksearch.setOnClickListener {
             val temp = binding.RankEdittext.text.toString()
-            val intent = Intent(this,dataShow::class.java)
+            val intent = Intent(this, dataShow::class.java)
             intent.putExtra("value",temp)
             intent.putExtra("type","rank")
             startActivity(intent)
@@ -83,7 +83,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.Remarkssearch.setOnClickListener {
             val temp = binding.RemarksEdittext.text.toString()
-            val intent = Intent(this,dataShow::class.java)
+            val intent = Intent(this, dataShow::class.java)
             intent.putExtra("value",temp)
             intent.putExtra("type","remarks")
             startActivity(intent)
@@ -91,7 +91,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.Phonesearch.setOnClickListener {
             val temp = binding.PhoneEdittext.text.toString()
-            val intent = Intent(this,dataShow::class.java)
+            val intent = Intent(this, dataShow::class.java)
             intent.putExtra("value",temp)
             intent.putExtra("type","phone")
             startActivity(intent)
@@ -216,7 +216,7 @@ class MainActivity : AppCompatActivity() {
 
 
         binding.add.setOnClickListener {
-            val intent = Intent(this,AddingNewPerson::class.java)
+            val intent = Intent(this, AddingNewPerson::class.java)
             startActivity(intent)
         }
 

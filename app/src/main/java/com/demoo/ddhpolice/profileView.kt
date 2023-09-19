@@ -1,4 +1,4 @@
-package com.example.ddhpolice
+package com.demoo.ddhpolice
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

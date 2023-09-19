@@ -8,6 +8,35 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:459712474427:android:34a28e08dfd05156501b1e",
+        "android_client_info": {
+          "package_name": "com.demoo.ddhpolice"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "459712474427-9v7r214csqljo6bmcdcbanjrefhhl0d5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLhzowxg2pajWIIfUhAN5qWTTJxUwIlOE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "459712474427-9v7r214csqljo6bmcdcbanjrefhhl0d5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:459712474427:android:ce2633f272ea8ee1501b1e",
         "android_client_info": {
           "package_name": "com.example.ddhpolice"
